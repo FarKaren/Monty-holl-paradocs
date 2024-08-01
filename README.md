@@ -16,7 +16,7 @@
 Для запуска задачи используйте следующую команду:
 
 ```bash
-bundle exec rake "monty_hall:simulate[true,10000]"
+bundle exec rake "monty_hall:simulate\[true,10000\]"
 ```
 
 Здесь `true` означает, что игрок всегда будет менять свой выбор, а `10000` - количество симуляций.
@@ -24,7 +24,7 @@ bundle exec rake "monty_hall:simulate[true,10000]"
 Вы можете изменить аргументы. Например, чтобы выполнить 5000 симуляций без смены двери, используйте:
 
 ```bash
-bundle exec rake "monty_hall:simulate[false,5000]"
+bundle exec rake "monty_hall:simulate\[false,5000\]"
 ```
 
 ### Пример вывода
