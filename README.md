@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Задача Monty Hall**
 
-Things you may want to cover:
+Эта задача реализует симуляцию задачи Монти Холла. Задачу можно запустить с помощью Rake.
 
-* Ruby version
+**Описание задачи**
 
-* System dependencies
+Задача принимает два аргумента:
 
-* Configuration
+1. **switch** (`true` или `false`) - Указывает, будет ли игрок менять свой первоначальный выбор.
+2. **simulations** - Количество симуляций, которые необходимо выполнить.
 
-* Database creation
+### Запуск задачи Monty Hall
 
-* Database initialization
+Для запуска задачи используйте следующую команду:
 
-* How to run the test suite
+```bash
+bundle exec rake "monty_hall:simulate[true,10000]"
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Здесь `true` означает, что игрок всегда будет менять свой выбор, а `10000` - количество симуляций.
 
-* Deployment instructions
+Вы можете изменить аргументы. Например, чтобы выполнить 5000 симуляций без смены двери, используйте:
 
-* ...
+```bash
+bundle exec rake "monty_hall:simulate[false,5000]"
+```
+
+### Пример вывода
+
+После выполнения задачи, вы увидите результат подобного вида:
+
+```plaintext
+Switching: true, Simulations: 10000, Wins: <количество побед>, Win Rate: <процент побед>%
+```
+
+Этот вывод показывает, сколько раз игрок выиграл и какой процент побед был достигнут в зависимости от стратегии (смена двери или нет).
+
